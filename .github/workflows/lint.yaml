@@ -13,4 +13,4 @@ jobs:
       - name: Install Determinate System Nix
         uses: DeterminateSystems/nix-installer-action@main
       - name: Work lasy github!
-        run: nix flake checks
+        run: nix flake check
