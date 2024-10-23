@@ -1,0 +1,20 @@
+version: "3"
+set: [errexit, pipefail, nounset]
+shopt: [globstar]
+dotenv: 
+  - .env
+tasks:
+  plan:
+    cmds:
+      - tofu plan
+  apply:
+    cmds:
+      - tofu apply -auto-approuve
+  lint:
+    desc: Lint files
+    cmds:
+      - task: lint:tf
+  lint:tf:
+    internal: true
+    cmds:
+      - tflint

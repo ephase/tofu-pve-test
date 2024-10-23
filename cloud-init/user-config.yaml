@@ -1,0 +1,11 @@
+#cloud-config
+hostname: test-debian-12
+users:
+- name: ephase
+  gecos: My muse à moi
+  passwd: $6$yc4GfL3I2UJZJDQp$vMMTIBMGoXN8HUzSRSKdxDcS26IuN.K2rUsEqDBIHZFl6uu6l0QzGOg8yOAJkzOGfSQrpgoBF5yFpIAxUmN0n0 
+  ssh_authorized_keys:
+  - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAHL/b0/uzZk8844xp2D5A8jIVXTnM3hWftbypRZQW7a ephase@morty
+  lock_passwd: false
+  sudo: ['ALL=(ALL) NOPASSWD:ALL']
+  shell: /bin/bash
