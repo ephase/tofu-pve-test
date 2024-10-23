@@ -33,6 +33,7 @@
           buildInputs = checkPkgs;
           buildPhase = ''
             ${pkgs.go-task}/bin/task lint --verbose --output prefixed
+            mkdir $out
           '';
         };
       };
